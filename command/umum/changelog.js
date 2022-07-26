@@ -69,11 +69,10 @@ module.exports = {
 					caption: str,
 					footer: config.namebot + " • " + config.ownername,
 					templateButtons: [
-						{ urlButton: { displayText: "Shortlink", url: "https://sl.rzkyfdlh.tech" } },
-						{ urlButton: { displayText: "Downloader", url: "https://downloader.rzkyfdlh.tech" } },
-						{ quickReplyButton: { displayText: "Script Bot📑", id: "#script" } },
-						{ quickReplyButton: { displayText: "Owner👥", id: "#owner" } },
-						{ quickReplyButton: { displayText: "Dashboard📊", id: "#db" } },
+						
+						{ quickReplyButton: { displayText: "Bot Codes", id: "#script" } },
+						{ quickReplyButton: { displayText: "Owner", id: "#owner" } },
+						
 					],
 				},
 				{ quoted: msg }
