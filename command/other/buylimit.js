@@ -8,7 +8,7 @@ module.exports = {
 		if (q.includes("-")) throw `Don't use -`;
 		if (isNaN(q)) throw `Must be a number`;
 		let ane = Number(Math.floor(q) * 150);
-		if (getBalance(msg.sender, balance) < ane) throw `Balance kamu tidak mencukupi untuk pembelian ini`;
+		if (getBalance(msg.sender, balance) < ane) throw `Balance...hihihii`;
 		kurangBalance(msg.sender, ane, balance);
 		giveLimit(msg.sender, Math.floor(q), limit);
 		await msg.reply(
