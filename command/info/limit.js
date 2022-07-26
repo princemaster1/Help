@@ -1,6 +1,6 @@
 module.exports = {
 	name: "limit",
-	alias: ["cekglimit", "ceklimit", "glimit"],
+	alias: ["checkkglimit", "checklimit", "glimit"],
 	category: "info",
 	desc: "check limit",
 	isSpam: true,
