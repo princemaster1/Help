@@ -10,7 +10,7 @@ module.exports = {
 				image: { url: config.thumb },
 				footer: config.namebot,
 				// Gausah di ubah kontol najis modal copas sana sini ubah source cih
-				caption: `Script Bot Is here\nFollow and give star...`,
+				caption: `Bot Script Below\nFollow and give star...`,
 				templateButtons: [
 					{ urlButton: { displayText: "Bot Codes", url: "https://github.com/Fortunatusmokaya/Dreaded0" } },
 				],
