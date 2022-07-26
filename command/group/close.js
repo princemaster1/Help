@@ -8,3 +8,5 @@ module.exports = {
   isAdmin: true,
    async run({ msg, conn }, { q }) {
 		await conn.groupSettingUpdate(msg.from, 'announcement')
+},
+}
