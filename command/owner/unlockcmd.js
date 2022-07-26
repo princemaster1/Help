@@ -3,9 +3,9 @@ module.exports = {
 	alias: ["ulockcmd"],
 	category: "private",
 	isOwner: true,
-	desc: "membuka fitur ",
+	desc: "unlocking command ",
 	use: `<name command>`,
-	query: `Masukan Parameter Nama Command`,
+	query: `Give name of Command`,
 	async run({ msg, conn }, { q, map, args, arg }) {
 		var data = [...map.command.keys()];
 		[...map.command.values()]
@@ -14,9 +14,9 @@ module.exports = {
 			.replace(/ +/gi, ",")
 			.split(",")
 			.map((a) => data.push(a));
-		if (!data.includes(q)) throw "Command tidak ditemukan";
-		if (!map.lockcmd.has(q)) throw "Command ini belum di lock sebelumnya";
+		if (!data.includes(q)) throw "Command was not off before";
+		if (!map.lockcmd.has(q)) throw "Command already locked";
 		map.lockcmd.delete(q);
-		await msg.reply(`Succes Membuka Lock Command "${q}"`);
+		await msg.reply(`Succes UnLocking The Command "${q}"`);
 	},
 };
