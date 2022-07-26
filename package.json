@@ -52,8 +52,7 @@
     "similarity": "^1.2.1",
     "spinnies": "^0.5.1",
     "string-crypto": "^2.0.2",
-    "wikijs": "^6.3.3",
-    "yt-search": "^2.10.3"
+    "wikijs": "^6.3.3"
   },
   "devDependencies": {
     "@hapi/boom": "^9.1.4",
