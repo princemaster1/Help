@@ -120,7 +120,7 @@ module.exports = {
 							}
 						);
 					} catch {
-						await msg.reply("Size Terlalu besar, media akan dikirim melalui document");
+						await msg.reply("Size Too Big... 🍆");
 						await conn.sendFile(
 							msg.from,
 							yt[0] ? yt[0].link : mp4.url,
