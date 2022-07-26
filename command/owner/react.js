@@ -7,7 +7,7 @@ module.exports = {
 	desc: "Reaction message",
 	use: "<Tag Mess>",
 	isQuoted: true,
-	query: "Masukkan emoji",
+	query: "Where is the emoji",
 	async run({ msg, conn }, { q }) {
 		const reactionMessage = {
 			react: {
