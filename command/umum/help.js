@@ -8,7 +8,7 @@ module.exports = {
 	name: "help",
 	alias: ["h", "cmd", "menu"],
 	category: "umum",
-	isLimit: true,
+	isLimit: false,
 	async run({ msg, conn }, { q, owner, map, args }) {
 		if (q) {
 			const data = [];
@@ -19,7 +19,7 @@ module.exports = {
 				return await msg.reply("Command not found");
 			else data.push(`*Name:* ` + cmd.name);
 			if (cmd.alias) data.push(`*Alias:* ${cmd.alias.join(", ")}`);
-			if (cmd.desc) data.push(`*Deskripsi:* ${cmd.desc}`);
+			if (cmd.desc) data.push(`*Description:* ${cmd.desc}`);
 			if (cmd.use)
 				data.push(`*Use:* ${prefix}${cmd.name} ${cmd.use}\n\nNote: [] = optional, | = or, <> = must be filled`);
 
@@ -50,44 +50,31 @@ module.exports = {
 			}
 			let str = `「 *${config.namebot}* 」
 	
-◪ *Time*
+🕝 TIME
 ❏ ${moment.tz(config.timezone).format("HH:mm:ss")}
 
-◪ *Speed*
+🚦SPEED
 ❏ ${processTime(msg.messageTimestamp, moment())} _seconds_
 
-◪ *Date*
+🗓️ DATE
 ❏ ${moment.tz(config.timezone).format("dddd, DD/MM/YYYY")}
 
-◪ *INFO USER*
-❏ Nomer: 「  ${msg.sender.split("@")[0]} 」
-❏ Nama: 「  ${conn.getName(msg.sender)} 」
-❏ Status: 「 ${isPremium ? "Premium" : owner ? "Owner" : "Standar"} 」
+📍 INFO USER
+❏ Number: 「  ${msg.sender.split("@")[0]} 」
+❏ Name: 「  ${conn.getName(msg.sender)} 」
+❏ User: 「 ${isPremium ? "Premium" : owner ? "Owner" : "Standard"} 」
 ${isPremium ? `❏ Expired: 「 ${xes.days} D ${xes.hours} H ${xes.minutes} M 」\n` : ""}
 
-◪ *Fitur terpopuler saat ini*
-${
-	dashboard[0]
-		? `1. *${prefix}${dashboard[0].name}* dipakai sebanyak *${dashboard[0].success + dashboard[0].failed}* kali`
-		: ``
-}
-${
-	dashboard[1]
-		? `2. *${prefix}${dashboard[1].name}* dipakai sebanyak *${dashboard[1].success + dashboard[1].failed}* kali`
-		: ``
-}
-${
-	dashboard[2]
-		? `3. *${prefix}${dashboard[2].name}* dipakai sebanyak *${dashboard[2].success + dashboard[2].failed}* kali\n\n`
-		: ``
+
+		
 }`;
 			const keys = Object.keys(category);
 			//var a = 1
 			for (const key of keys) {
-				str += `*❏ ${key.toUpperCase()}*\n${category[key]
+				str += `${key.toUpperCase()}\n${category[key]
 					.map(
 						(cmd, index) =>
-							`*${index + 1}.* *${cmd.options.noPrefix ? "" : "#"}${cmd.name}* ${
+							`${index + 1}. ${cmd.options.noPrefix ? "" : "!"}${cmd.name} ${
 								cmd.category == "private"
 									? ""
 									: cmd.use
@@ -97,7 +84,7 @@ ${
 					)
 					.join("\n")}\n\n`;
 			}
-			str += `typing *${prefix}help sticker* for get the details and example use`;
+			str += `typing <${prefix}help sticker> to get the details and example of use`;
 			await conn.sendMessage(
 				msg.from,
 				{
@@ -106,11 +93,8 @@ ${
 					gifPlayback: true,
 					footer: config.namebot + " • " + config.ownername,
 					templateButtons: [
-						{ urlButton: { displayText: "Shortlink", url: "https://sl.rzkyfdlh.tech" } },
-						{ urlButton: { displayText: "Downloader", url: "https://down.rzkyfdlh.tech" } },
-						{ quickReplyButton: { displayText: "Script Bot📑", id: "#script" } },
-						{ quickReplyButton: { displayText: "Changelog📋", id: "#changelog" } },
-						{ quickReplyButton: { displayText: "Dashboard📊", id: "#db" } },
+						{ quickReplyButton: { displayText: "Script Bot ", id: "#script" } },
+						{ quickReplyButton: { displayText: "Owner", id: "#owner" } },
 					],
 				},
 				{ quoted: msg }
