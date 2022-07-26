@@ -1,11 +1,11 @@
 module.exports = {
 	name: "broadcastgroup",
 	alias: ["bcgc"],
-	desc: "Mengirim Chat Ke Group Yang bot punya",
+	desc: "Send Broadcast To Groups",
 	use: "<text>",
 	category: "private",
 	isOwner: true,
-	query: "Masukan text yg ingin di bc",
+	query: "Where is the text for bc",
 	async run({ msg, conn }, { q }) {
 		let getGroups = await conn.groupFetchAllParticipating();
 		let groups = Object.entries(getGroups)
@@ -14,8 +14,8 @@ module.exports = {
 		let anu = groups.map((v) => v.id);
 		for (let i of anu) {
 			await require("delay")(3000);
-			await conn.sendMessage(i, { text: q + "\n\n*Broadcast Message*" });
+			await conn.sendMessage(i, { text: q + "\n\n*Dreaded Bot*" });
 		}
-		await msg.reply("Sukses");
+		await msg.reply("Success");
 	},
 };
