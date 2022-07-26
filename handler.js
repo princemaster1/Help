@@ -287,7 +287,7 @@ if (!isCmd ) {
     msg.reply(last.cnt)
     }
    } catch (e) {
-     console.log('Error' + e)
+     console.log('Error' + e);
    }
  }
 
