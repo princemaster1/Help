@@ -6,10 +6,10 @@ module.exports = {
 	name: "imgtopdf",
 	alias: ["pdf", "topdf"],
 	category: "tools",
-	desc: "Mengubah Foto Ke Dokumen PDF",
+	desc: "Convert image to document PDF",
 	isSpam: true,
 	isLimit: true,
-	query: `Masukan nama file atau nama dokumen PDF kamu`,
+	query: `Provide the image `,
 	isPrivate: true,
 	async run({ msg, conn }, { q, map }) {
 		if (map.pdf.has(msg.sender)) throw "Kamu masih dalam sesi Image to pdf";
