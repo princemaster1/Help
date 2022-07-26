@@ -2,10 +2,10 @@ module.exports = {
 	name: "save",
 	alias: ["sf"],
 	category: "private",
-	desc: "Menyimpan / menambah file",
+	desc: " Saves a file to db",
 	isOwner: true,
 	isSpam: true,
-	query: "Masukkan nama path file,\n example: .sf ./command/other/fitur.js",
+	query: "Give path file,\n example: .sf ./command/other/fitur.js",
 	use: "<name file>",
 	isQuoted: true,
 	async run({ msg, conn }, { q, map, args }) {
