@@ -26,12 +26,12 @@ module.exports = {
 		var from = await phoneNum("+" + msg.sender.split("@")[0]).getRegionCode();
 		var Country = await require("country-language").getCountry(from);
 
-		txt = `*Profile Ingfo*\n\n`;
+		txt = `*Profile Info*\n\n`;
 		txt += `*• Name :* ${conn.getName(msg.sender)}\n`;
 		txt += `*• Tag :* @${msg.sender.split("@")[0]}\n`;
 		txt += `*• About :* ${bio.status || bio}\n`;
 		txt += `*• Number :* ${phoneNum("+" + tol.replace("@s.whatsapp.net", "")).getNumber("international")}\n`;
-		txt += `*• Jenis kelamin :* ${gender.data.gender || "male" == "male" ? "Laki-Laki" : "Perempuan"}\n`;
+		txt += `*• Age :* ${gender.data.gender || "male" == "male" ? "Who knows?" : "Perempuan"}\n`;
 		txt += `*• From:* ${Country.name}\n`;
 		txt += `*• Link :* https://wa.me/${msg.sender.split("@")[0]}`;
 		//msg.reply(txt, {withTag: true})
