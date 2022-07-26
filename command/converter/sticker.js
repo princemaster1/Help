@@ -72,7 +72,7 @@ module.exports = {
 				stickerBuff = await sticker(buffer, { ...ext, withPackInfo: true, packInfo, cmdType: "1" });
 				await conn.sendMessage(from, { sticker: stickerBuff }, { quoted: msg });
 			} else {
-				await msg.reply(`reply sticker`);
+				await msg.reply(`Reply image or short video`);
 			}
 			(buffer = null), (stickerBuff = null);
 		} catch (e) {
