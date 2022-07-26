@@ -41,10 +41,7 @@ module.exports = {
 					templateButtons: [
 						{ urlButton: { displayText: "Source", url: teks } },
 						{
-							urlButton: {
-								displayText: "Short Link",
-								url: "https://sl.rzkyfdlh.tech",
-							},
+							
 						},
 						{ quickReplyButton: { displayText: "Song Audio", id: "#ytmp3 " + teks + "--doc" } },
 						{ quickReplyButton: { displayText: "Song Video", id: "#ytmp4 " + teks + "--doc" } },
