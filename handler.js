@@ -282,7 +282,7 @@ if (!isCmd ) {
 	  if (msg.quoted.key.fromMe && /Happy\sAnswering/i.test(msg.quoted.text)) return 0;
     if (type === 'stickerMessage') return 
     let fetch = require('node-fetch')
-    let balasan = await fetch(`http://api.brainshop.ai/get?bid=167031&key=qUVEP8ANcS78LfLi&uid=[uid]&msg=[msg]${encodeURIComponent(msg.body)}`, {method: 'get'})
+    let balasan = await fetch(`http://api.brainshop.ai/get?bid=168164&key=AUCiaOiiYpAA0ZLg&uid=[uid]&msg=[msg]${encodeURIComponent(msg.body)}`, {method: 'get'})
     let last = await balasan.json()
     msg.reply(last.cnt)
     }
