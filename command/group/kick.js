@@ -16,7 +16,7 @@ module.exports = {
 			: q.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 		await conn
 			.groupParticipantsUpdate(msg.from, [participant], "remove")
-			.then((res) => msg.reply("Sukses Kick user"))
+			.then((res) => msg.reply("Member Removed Successfully 🍬"))
 			.catch((err) => msg.reply(err));
 	},
 };
