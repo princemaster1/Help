@@ -2,7 +2,7 @@ module.exports = {
 	name: "promote",
 	alias: ["pm"],
 	category: "group",
-	desc: "Promote jadi admin group",
+	desc: "Promote member to be admin group",
 	use: "<tagMem>",
 	isGroup: true,
 	isBotAdmin: true,
@@ -10,6 +10,6 @@ module.exports = {
 	async run({ msg, conn }) {
 		const mm = msg.quoted ? [msg.quoted.sender] : msg.mentions;
 		for (let i of mm) await conn.groupParticipantsUpdate(msg.from, [i], "promote");
-		await msg.reply("Suksess");
+		await msg.reply("Member Promoted Successfully ✅");
 	},
 };
