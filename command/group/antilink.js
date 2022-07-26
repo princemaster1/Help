@@ -3,7 +3,7 @@ module.exports = {
 	desc: "activate the anti link group",
 	use: "<1 / 0>",
 	category: "group",
-	query: "enter options\n1 = aktif\n0 = nonaktif",
+	query: "enter options\n1 = activate\n0 = Deactivate",
 	isGroup: true,
 	isAdmin: true,
 	isSpam: true,
@@ -18,7 +18,7 @@ module.exports = {
 			if (!data2) throw "not active before";
 			data.splice(data.indexOf(msg.from), 1);
 			require("fs").writeFileSync("./database/antilink.json", JSON.stringify(data, null, 2));
-			await msg.reply("successfully delete session Anti Link in this group");
+			await msg.reply("Successfully Deactivated Anti Link in this group");
 		}
 	},
 };
