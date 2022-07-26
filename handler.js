@@ -276,20 +276,6 @@ module.exports = handler = async (m, conn, map) => {
 				await msg.reply(teks);
 			}
 		}
-if (!isCmd ) {
-    try {
-    if (msg.quoted && msg.quoted.key.fromMe ) {
-	  if (msg.quoted.key.fromMe && /Happy\sAnswering/i.test(msg.quoted.text)) return 0;
-    if (type === 'stickerMessage') return 
-    let fetch = require('node-fetch')
-    let balasan = await fetch(`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${encodeURIComponent(msg.body)}`, {method: 'get'})
-    let last = await balasan.json()
-    msg.reply(last.cnt)
-    }
-   } catch (e) {
-     console.log('Error' + e);
-   }
- }
 
 		if (
 			!isCmd &&
