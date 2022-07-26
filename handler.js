@@ -214,12 +214,12 @@ module.exports = handler = async (m, conn, map) => {
 		require("./lib/topdf")(msg, conn, map);
 
 		// anti +1
-		if (!isGroup && require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "212", "92") {
+		if (!isGroup && require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "212") {
 			await conn.sendMessage(msg.from, { text: "Owner Doesn't allow your country code into my inbox for some reason.. ⚠️⚠️ Owner will unblock you later...See You..·" });
 			await require("delay")(3000);
 			await conn.updateBlockStatus(msg.sender, "block");
 			await conn.sendMessage(config.owner[0], {
-				text: "*â€¢ Block Detected Number +92 or +212*\n\nwa.me/" + msg.sender.split("@")[0],
+				text: "*â€¢ount Block Detected Number +212*\n\nwa.me/" + msg.sender.split("@")[0],
 			});
 		}
 		if (require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "1") return;
