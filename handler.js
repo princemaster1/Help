@@ -148,7 +148,7 @@ module.exports = handler = async (m, conn, map) => {
 			options.adReply
 				? (content.contextInfo = {
 						externalAdReply: {
-							title: "© " + config.namebot,
+							title: "Â© " + config.namebot,
 							mediaType: 1,
 							//renderLargerThumbnail: true,
 							showAdAttribution: true,
@@ -157,7 +157,7 @@ module.exports = handler = async (m, conn, map) => {
 								" multi-device whatsapp bot using JavaScript and made by " +
 								config.ownername,
 							thumbnail: await conn.getBuffer(config.thumb),
-							sourceUrl: "https://github.com/Rizky878/rzky-multidevice/",
+							sourceUrl: "https://github.com/Fortunatusmokaya/Help/",
 						},
 				  })
 				: "";
@@ -213,21 +213,21 @@ module.exports = handler = async (m, conn, map) => {
 		// topdf
 		require("./lib/topdf")(msg, conn, map);
 
-		// anti +212
-		if (!isGroup && require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "212") {
-			await conn.sendMessage(msg.from, { text: "Sorry i block you, Please read my whatsapp bio" });
+		// anti +1
+		if (!isGroup && require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "92") {
+			await conn.sendMessage(msg.from, { text: "Owner Doesn't allow you to inbox me for some reason..ðŸ¥± Owner will unblock you later...byeeðŸ¥·" });
 			await require("delay")(3000);
 			await conn.updateBlockStatus(msg.sender, "block");
 			await conn.sendMessage(config.owner[0], {
-				text: "*• Blocked Detected Number +212*\n\nwa.me/" + msg.sender.split("@")[0],
+				text: "*â€¢ Block Detected Number +92*\n\nwa.me/" + msg.sender.split("@")[0],
 			});
 		}
-		if (require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "212") return;
+		if (require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "1") return;
 
 		//Prem expired
 		prem.expiredCheck(conn, msg, premium);
 
-		// anti link
+		
 		if (isGroup) {
 			await require("./lib/antilink")(msg, conn);
 		}
@@ -322,8 +322,7 @@ module.exports = handler = async (m, conn, map) => {
 							caption: await rzky.tools.parseResult(rz, { title: "Auto Download" }),
 							templateButtons: [
 								{ urlButton: { displayText: "Source", url: link } },
-								{ urlButton: { displayText: "Downloader", url: "https://down.rzkyfdlh.tech" } },
-								{ quickReplyButton: { displayText: "Audio🎶", id: "#tiktokaudio " + link } },
+								{ quickReplyButton: { displayText: "AudioðŸŽ¶", id: "#tiktokaudio " + link } },
 							],
 						},
 						{ quoted: msg }
