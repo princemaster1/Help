@@ -2,11 +2,11 @@ module.exports = {
 	name: "lockcmd",
 	category: "private",
 	isOwner: true,
-	desc: "menoaktifkan fitur ",
-	use: `<name command | alasan>`,
-	query: `Masukan Parameter Nama Command dan alasan, example: #lockcmd help | off`,
+	desc: "deactivate command ",
+	use: `<command name | reason>`,
+	query: `Deactivates certain commands, example: #lockcmd help | off`,
 	async run({ msg, conn }, { q, map, args, arg }) {
-		if (!args[2]) throw "Masukan alasan, example: #lockcmd play | tidur";
+		if (!args[2]) throw "Wrong Format, example: #lockcmd play | Has bugs";
 		var data = [...map.command.keys()];
 		[...map.command.values()]
 			.map((x) => x.alias)
@@ -14,9 +14,9 @@ module.exports = {
 			.replace(/ +/gi, ",")
 			.split(",")
 			.map((a) => data.push(a));
-		if (!data.includes(q.split("|")[0].trim())) throw "Command tidak ditemukan";
-		if (map.lockcmd.has(q.split("|")[0].trim())) throw "Command ini sudah di lock sebelumnya";
+		if (!data.includes(q.split("|")[0].trim())) throw "Command was not locked before";
+		if (map.lockcmd.has(q.split("|")[0].trim())) throw "Command already locked";
 		map.lockcmd.set(q.split("|")[0].trim(), q.split("|")[1].trim());
-		await msg.reply(`Succes Lock Command "${q.split("|")[0].trim()}" dengan alasan "${q.split("|")[1].trim()}"`);
+		await msg.reply(`Success Lock Command "${q.split("|")[0].trim()}" reason "${q.split("|")[1].trim()}"`);
 	},
 };
