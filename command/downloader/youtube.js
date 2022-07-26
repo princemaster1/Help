@@ -46,9 +46,8 @@ module.exports = {
 								url: "https://sl.rzkyfdlh.tech",
 							},
 						},
-						{ quickReplyButton: { displayText: "Audio 🎶", id: "#ytmp3 " + teks } },
-						{ quickReplyButton: { displayText: "Video 🎥", id: "#ytmp4 " + teks } },
-						{ quickReplyButton: { displayText: "Document Audio 📄", id: "#ytmp3 " + teks + " --doc" } },
+						{ quickReplyButton: { displayText: "Song Audio", id: "#ytmp3 " + teks + "--doc" } },
+						{ quickReplyButton: { displayText: "Song Video", id: "#ytmp4 " + teks + "--doc" } },
 					],
 				});
 				break;
