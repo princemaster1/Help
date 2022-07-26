@@ -23,7 +23,7 @@ module.exports = {
 		let data2 = db.cekDatabase("left", "id", msg.from);
 		if (args[0] == 1) {
 			if (data2) throw "been active before";
-			db.modified("left", { id: msg.from, teks: "Goodbye 👋 @user", lastUpdate: false });
+			db.modified("left", { id: msg.from, teks: "Goodbye 👋 @user\nWe probably not gonna miss you anymore! 😖", lastUpdate: false });
 			await msg.reply(
 				`Left turned on successfully\n Type\n1. *${prefix}setwelcome text*\n-desc: if you want to change the text on welcome\n2. *${prefix}setleft text*\n-desc: if you want to change the text on left`
 			);
