@@ -1,6 +1,6 @@
 module.exports = {
-	name: "cekpremium",
-	alias: ["cekprem", "cekvip"],
+	name: "checkpremium",
+	alias: ["checkprem", "checkvip"],
 	category: "premium",
 	isSpam: true,
 	isPremium: true,
