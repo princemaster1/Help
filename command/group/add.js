@@ -10,7 +10,7 @@ module.exports = {
 	isSpam: true,
 	async run({ msg, conn }, { q, prefix }) {
 		add = q ? q : msg.quoted ? msg.quoted : false;
-		if (!add) return msg.reply("Example: " + prefix + "add 62728288");
+		if (!add) return msg.reply("Example: " + prefix + "add 254114018035");
 		q = msg.quoted ? msg.quoted.sender.split("@")[0] : q;
 		let prk = q.replace(/[^a-zA-Z0-9 ]/g, "").split(" ");
 		let chunk = [];
@@ -27,7 +27,7 @@ module.exports = {
 		for (let i of participant) {
 			if (!global.statParticipant && !cek.participants.includes(i)) {
 				const code = await conn.groupInviteCode(msg.from);
-				await msg.reply(" The number @" + i.split("@")[0] + " you added is private, inviting the user...", {
+				await msg.reply(" The number @" + i.split("@")[0] + " you added is private,⚠️ inviting the user in inbox...", {
 					withTag: true,
 				});
 				await conn.sendGroupV4Invite(msg.from, i, code, "", cek.subject);
