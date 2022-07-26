@@ -288,7 +288,7 @@ const connect = async () => {
 	conn.ws.on("CB:call", async (json) => {
 		if (json.content[0].tag == "offer") {
 			conn.sendMessage(json.content[0].attrs["call-creator"], {
-				text: `Terdeteksi Menelpon BOT!\nSilahkan Hubungi Owner Untuk Membuka Block !\n\nNomor Owner: \n${config.owner
+				text: `You called the bot! 😡\nYou will have to contact my owner for you to be unblocked! 🥷\n\nOwner Number: \n${config.owner
 					.map(
 						(a) =>
 							`*wa.me/${a.split(`@`)[0]}* | ${
@@ -364,23 +364,23 @@ const connect = async () => {
 		const res = json[0];
 		if (res.announce == true) {
 			conn.sendMessage(res.id, {
-				text: `「 Group Settings Change 」\n\nGroup telah ditutup oleh admin, Sekarang hanya admin yang dapat mengirim pesan !`,
+				text: `「 Group Settings Change 」\n\nGroup settings changed, Only Admins can message as you can see !😂`,
 			});
 		} else if (res.announce == false) {
 			conn.sendMessage(res.id, {
-				text: `「 Group Settings Change 」\n\nGroup telah dibuka oleh admin, Sekarang peserta dapat mengirim pesan !`,
+				text: `「 Group Settings Change 」\n\nGroup settings changed, Everyone can message now! 🌚`,
 			});
 		} else if (res.restrict == true) {
 			conn.sendMessage(res.id, {
-				text: `「 Group Settings Change 」\n\nInfo group telah dibatasi, Sekarang hanya admin yang dapat mengedit info group !`,
+				text: `「 Group Settings Change 」\n\nAnyone can edit group info! 🌚`,
 			});
 		} else if (res.restrict == false) {
 			conn.sendMessage(res.id, {
-				text: `「 Group Settings Change 」\n\nInfo group telah dibuka, Sekarang peserta dapat mengedit info group !`,
+				text: `「 Group Settings Change 」\n\nOnly Admins can edit group info! 😂`,
 			});
 		} else {
 			conn.sendMessage(res.id, {
-				text: `「 Group Settings Change 」\n\nGroup Subject telah diganti menjadi *${res.subject}*`,
+				text: `「 Group Settings Change 」\n\nGroup Subject has been changed to *${res.subject}*`,
 			});
 		}
 	});
@@ -402,11 +402,11 @@ const connect = async () => {
 			froms,
 			{
 				text:
-					"Hayoloh ngapus apaan @" +
+					"Why delete that message? 🙄 @" +
 					participant.split("@")[0] +
-					`\n\n*➤ Info*\n*• Participant:* ${participant.split("@")[0]}\n*• Delete message:* ${moment(
+					`\n\n*➤ Info*\n*• Participant:* ${participant.split("@")[0]}\n*• Message Deleted:* ${moment(
 						Date.now()
-					).format("dddd, DD/MM/YYYY HH:mm:ss")}\n*• Message send:* ${moment(
+					).format("dddd, DD/MM/YYYY HH:mm:ss")}\n*• Message sent:* ${moment(
 						mek.messageTimestamp * 1000
 					).format("dddd, DD/MM/YYYY HH:mm:ss")}\n*• Type:* ${Object.keys(mek.message)[0]}`,
 				mentions: [participant],
