@@ -30,9 +30,9 @@ module.exports = {
 			const check = await queryInvite(code);
 
 			//
-			if (check.size >= 257) return await msg.reply("Group Full");
-			if (check.size < 80)
-				return await msg.reply("The minimum requirement for group members must be more than 80 people.");
+			if (check.size >= 512) return await msg.reply("Group Full");
+			if (check.size < 50)
+				return await msg.reply("The minimum requirement for group members must be more than 50 people.");
 		} catch {
 			return msg.reply("Invalid invite url.");
 		}
@@ -40,6 +40,6 @@ module.exports = {
 		// Trying to join group with given invite code
 		let anu = await conn.groupAcceptInvite(code);
 		if (!anu) return msg.reply("Looks like the group already full or became invalid when I'm trying to join :/");
-		await msg.reply("Success join into your group.");
+		await msg.reply("Successfully joined into your group... Remember to make me Admin.");
 	},
 };
