@@ -75,7 +75,7 @@ Contoh Command : [`./command/umum/help.js`](https://github.com/Rizky878/rzky-mul
 
 ## Highlights
 
--   [x] Simple Penggunaan,
+-   [x] Simple Penggn,
 -   [x] Mudah digunakan,
 -   [x] Mudah untuk dirawat/diperbaiki,
 -   [x] Dan ringan
@@ -176,7 +176,7 @@ npm install -g typescript
 npm run build:tsc
 ```
 
-### Start Bot
+### Start bott
 
 Start and Scan QR<br />
 
