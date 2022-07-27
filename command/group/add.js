@@ -6,6 +6,7 @@ module.exports = {
 	wait: true,
 	isGroup: true,
 	isBotAdmin: true,
+        isOwner: true,
 	isAdmin: true,
 	isSpam: true,
 	async run({ msg, conn }, { q, prefix }) {
