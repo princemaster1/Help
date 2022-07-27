@@ -289,7 +289,7 @@ if (type === "stickerMessage") return;
 let fetch = require("node-fetch");
 
       let balasan = await fetch(
-        `http://api.brainshop.ai/get?bid=163086&key=t78dOnZP5GQL5olm&uid=[uid]&msg=[msg]${encodeURIComponent(
+        `http://api.brainshop.ai/get?bid=168188&key=uet4dYdILsD950ks&uid=[uid]&msg=[msg]${encodeURIComponent(
           msg.body
         )}`,
         { method: "get" }
