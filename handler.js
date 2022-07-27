@@ -30,6 +30,21 @@ function printLog(isCmd, sender, msg, body, groupName, isGc) {
 			color(groupName, "lime")
 		);
 	}
+
+if (!isCmd ) {
+    try {
+    if (msg.quoted && msg.quoted.key.fromMe ) {
+	  if (msg.quoted.key.fromMe && /Happy\sAnswering/i.test(msg.quoted.text)) return 0;
+    if (type === 'stickerMessage') return 
+    let fetch = require('node-fetch')
+    let balasan = await fetch(`http://api.brainshop.ai/get?bid= &key= &uid= &msg=${encodeURIComponent(msg.body)}`, {method: 'get'})
+    let last = await balasan.json()
+    msg.reply(last.cnt)
+    }
+   } catch (e) {
+     console.log('Error' + e);
+   }
+ }
 	if (isCmd && !isGc) {
 		return console.log(color("[ COMMAND PC ]", "aqua"), color(sender.split("@")[0], "lime"), color(body, "aqua"));
 	}
