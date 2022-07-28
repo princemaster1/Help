@@ -18,7 +18,7 @@
 | Build Pack  | Link                                                                  |
 | ----------- | --------------------------------------------------------------------- |
 | **FFMPEG**  | [HERE](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
-| **LIBWEBP** | [HERE](https://github.com/clhuang/heroku-buildpack-webp-binaries.git) |
+| **libWEBP** | [HERE](https://github.com/clhuang/heroku-buildpack-webp-binaries.git) |
 
 </div><br />
 <br />
@@ -107,7 +107,7 @@ Untuk request atau report bug bisa chat saya disini [Whatsapp](https://wa.me/628
 
 ## Instalasi
 
-### Dibutuhkan
+### Dibut
 
 1.  [Nodejs](https://nodejs.org/en/download) 16x/17x
 2.  [FFmpeg](https://ffmpeg.org)
@@ -119,7 +119,7 @@ Untuk request atau report bug bisa chat saya disini [Whatsapp](https://wa.me/628
 -   Untuk pengguna Linux, kamu bisa pakai manager paket kamu sendiri. Contohnya;
 
 ```bash
-# apt (Ubuntu)
+# apt (Ubntu)
 apt install ffmpeg -y
 
 # pacman (Arch Linux)
