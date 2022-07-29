@@ -1,5 +1,5 @@
 {
-	"wait": "Analyzing...",
+	"wait": "Analyzing Data... 📥 Wait for Output... 📤",
 	"error": {
 		"Iv": "The link you provided is not valid",
 		"api": "Sorry an error occurred"
@@ -8,6 +8,6 @@
 	"OnlyPM": "This command can only be used in private messages",
 	"GrupAdmin": "You Are Not An Admin... 😖",
 	"BotAdmin": "Bot Is Not An admin... 😖",
-	"OnlyOwner": "This command can only be used by the Bot Owner",
-	"OnlyPrem": "This command is only for premium members"
+	"OnlyOwner": "Command meant for *Bot Owner* ⚠️",
+	"OnlyPrem": "Command meant for premium members"
 }
