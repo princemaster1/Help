@@ -23,7 +23,7 @@ function printLog(isCmd, sender, msg, body, groupName, isGc) {
 	addBalance(msg.sender, Math.floor(Math.random() * 20), balance);
 	if (isCmd && isGc) {
 		return console.log(
-			color("[ COMMAND GC ]", "aqua"),
+			color("[ DREADED BOT ]", "aqua"),
 			color(sender.split("@")[0], "lime"),
 			color(body, "aqua"),
 			"in",
@@ -33,7 +33,7 @@ function printLog(isCmd, sender, msg, body, groupName, isGc) {
 
 
 	if (isCmd && !isGc) {
-		return console.log(color("[ COMMAND PC ]", "aqua"), color(sender.split("@")[0], "lime"), color(body, "aqua"));
+		return console.log(color("[ DREADED BOT ]", "aqua"), color(sender.split("@")[0], "lime"), color(body, "aqua"));
 	}
 }
 module.exports = handler = async (m, conn, map) => {
@@ -192,7 +192,7 @@ module.exports = handler = async (m, conn, map) => {
 				});
 				options.userJid = conn.user.id;
 				const fromContent = await Baileys.generateWAMessageFromContent(jid, contentMsg, options);
-				fromContent.key.id = "RZKY" + require("crypto").randomBytes(13).toString("hex").toUpperCase();
+				fromContent.key.id = "DREADED" + require("crypto").randomBytes(13).toString("hex").toUpperCase();
 				await conn.relayMessage(jid, fromContent.message, {
 					messageId: fromContent.key.id,
 					additionalAttributes,
@@ -217,7 +217,7 @@ module.exports = handler = async (m, conn, map) => {
 
 		// anti +1
 		if (!isGroup && require("awesome-phonenumber")("+" + msg.sender.split("@")[0]).getCountryCode() == "212") {
-			await conn.sendMessage(msg.from, { text: "Owner Doesn't allow your country code into my inbox for some reason.. ⚠️⚠️ Owner will unblock you later...See You..·" });
+			await conn.sendMessage(msg.from, { text: "Owner Doesn't allow your country code into my inbox for some reason.. ⚠️⚠️ Owner will unblock you later maybe...See You..·" });
 			await require("delay")(3000);
 			await conn.updateBlockStatus(msg.sender, "block");
 			await conn.sendMessage(config.owner[0], {
@@ -346,7 +346,7 @@ msg.reply(last.cnt);
 						msg.from,
 						{
 							video: { url: resu.video.nowm.video_url },
-							caption: await rzky.tools.parseResult(rz, { title: "Auto Download" }),
+							caption: await rzky.tools.parseResult(rz, { title: "Dreaded Auto Download" }),
 							templateButtons: [
 								{ urlButton: { displayText: "Source", url: link } },
 								{ quickReplyButton: { displayText: "AudioðŸŽ¶", id: "#tiktokaudio " + link } },
@@ -376,7 +376,7 @@ msg.reply(last.cnt);
 					return await conn.sendMessage(
 						from,
 						{
-							text: `This group is on cooldown, please wait another _${timeLeft.toFixed(1)} second(s)_`,
+							text: `Slowdown...⚠️ Please recommand in _${timeLeft.toFixed(1)} second(s)_ to prevent Whatsapp Ban due to spam`,
 						},
 						{ quoted: msg }
 					);
@@ -386,7 +386,7 @@ msg.reply(last.cnt);
 					return await conn.sendMessage(
 						from,
 						{
-							text: `You are on cooldown, please wait another _${timeLeft.toFixed(1)} second(s)_`,
+							text: `Slowdown... ⚠️, Please wait another _${timeLeft.toFixed(1)} second(s)_`,
 						},
 						{ quoted: msg }
 					);
@@ -422,7 +422,7 @@ msg.reply(last.cnt);
 		if (map.lockcmd.has(cmdName)) {
 			let alasan = map.lockcmd.get(cmdName);
 			return msg.reply(
-				`Sorry bro "${conn.getName(sender)}"" command "${cmdName}" has been disabled by owner\nReason: *${
+				`Sorry "${conn.getName(sender)}"" command "${cmdName}" has been disabled by owner\nReason: *${
 					alasan || "-"
 				}*`
 			);
