@@ -94,7 +94,7 @@ const limitData = cron.schedule(
 let data = fs.readFileSync(path.join(__dirname, "doom.flf"), "utf8");
 require("figlet").parseFont("doom", data);
 require("figlet").text(
-	"RZKY MD",
+	"DREADED MD",
 	{
 		font: "doom",
 		horizontalLayout: "default",
@@ -176,7 +176,7 @@ const ReadFitur = () => {
 			global.reloadFile(`./command/${res}/${file}`);
 		}
 	});
-	spinnies.succeed("spinner-1", { text: "Command loaded successfully", color: "yellow" });
+	spinnies.succeed("spinner-1", { text: "Commands loaded successfully", color: "yellow" });
 };
 // cmd
 ReadFitur();
@@ -238,15 +238,15 @@ const connect = async () => {
 	conn.ev.on("creds.update", saveState);
 	conn.ev.on("connection.update", async (up) => {
 		const { lastDisconnect, connection } = up;
-		if (connection) spinnies.add("spinner-2", { text: "Connecting to the WhatsApp bot...", color: "cyan" });
+		if (connection) spinnies.add("spinner-2", { text: "Dreaded bot is connecting now... Wait...", color: "cyan" });
 		if (connection == "connecting")
-			spinnies.add("spinner-2", { text: "Connecting to the WhatsApp bot...", color: "cyan" });
+			spinnies.add("spinner-2", { text: "Dreaded bot is trying to link to the host WhatsApp now...", color: "cyan" });
 		if (connection) {
 			if (connection != "connecting")
 				spinnies.update("spinner-2", { text: "Connection: " + connection, color: "yellow" });
 		}
 		if (connection == "open")
-			spinnies.succeed("spinner-2", { text: "Successfully connected to whatsapp", color: "green" });
+			spinnies.succeed("spinner-2", { text: "Dreaded Bot Successfully connected to whatsapp... Check if it is working", color: "green" });
 
 		if (connection === "close") {
 			let reason = new Boom(lastDisconnect.error).output.statusCode;
@@ -327,7 +327,7 @@ const connect = async () => {
 					? console.log(color("[INFO]", "yellow"), "failed to create directory", err)
 					: "";
 			} else {
-				console.log(color("[INFO]", "yellow"), `Succes create a "src" file`);
+				console.log(color("[INFO]", "yellow"), `Success in creating a "src" file`);
 				fs.writeFile("./src/rzky-md.jpg", (await require("axios")(config.thumb)).data, function (err) {
 					if (err) {
 						console.log(color("[INFO]", "yellow"), "error writing file", err);
@@ -376,7 +376,7 @@ const connect = async () => {
 			});
 		} else if (res.restrict == false) {
 			conn.sendMessage(res.id, {
-				text: `「 Group Settings Change 」\n\nOnly Admins can edit group info! 😂`,
+				text: `「 Group Settings Change 」\n\nOnly Admins can edit group info! 😌`,
 			});
 		} else {
 			conn.sendMessage(res.id, {
