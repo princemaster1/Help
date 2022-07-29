@@ -7,7 +7,7 @@ module.exports = {
 	isGroup: true,
 	isBotAdmin: true,
         isOwner: true,
-        noPrefix: false,
+        noPrefix: true,
 	isAdmin: false,
 	isSpam: true,
 	async run({ msg, conn }, { q, prefix }) {
