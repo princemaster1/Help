@@ -8,6 +8,6 @@
 > cd Help
 > npm install --arch=x64 --platform=linux sharp
 > npm i @adijiwashing/latest@latest
-> npm start
+>npm start
 
 # Scan Qr
