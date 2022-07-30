@@ -20,3 +20,7 @@
 >npm start
 
 # Scan Qr
+
+# Note
+
+Remember to delete dreaded-md.json file before running npm start command!
