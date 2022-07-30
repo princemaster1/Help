@@ -9,7 +9,7 @@ module.exports = {
 	isGroup: true,
 	isLimitGame: false,
 	async run({ msg, conn }, { q, map }) {
-		if (cekStatus(msg.from, map, "tebakbendera")) throw "Well...";
+		if (cekStatus(msg.from, map, "tebakbendera")) throw "There are unanswered questions still...";
 		let waktugame = 60;
 		let tebakbendera = await rzky.game.tebakbendera();
 		if (tebakbendera) {
