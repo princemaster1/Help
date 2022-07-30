@@ -8,8 +8,8 @@ module.exports = {
   isAdmin: true,
   async run({ msg, conn }, { q }) {
   	await
-await conn.sendMessage(msg.from, {text: "Bot is now leaving group... Good bye..👋\nTo add me back use !join <group link>"})
-await require("delay")(5000);
+await conn.sendMessage(msg.from, {text: "Good bye...👋 To add me back use *!join <group link>*"})
+await require("delay")(3000);
 await conn.groupLeave(msg.from)
     },
 }
