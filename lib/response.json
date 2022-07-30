@@ -1,5 +1,5 @@
 {
-	"wait": "Analyzing Data... 📥 Wait for Output... 📤",
+	"wait": "Analyzing Input Data... 📥 Wait for Output... 📤",
 	"error": {
 		"Iv": "The link you provided is not valid",
 		"api": "Sorry an error occurred"
