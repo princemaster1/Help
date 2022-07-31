@@ -5,7 +5,7 @@
 	"session": "dreaded-md.json",
 	"ownername": "Fortunatus 🥷",
 	"self": false,
-	"server": false,
+	"server": true,
 	"comment_server": "change 'server' with 'true', if you run in replit!",
 	"limit": { "limitUser": 30, "gameLimitUser": 10, "gameLimitPremium": 30 },
 	"packInfo": { "packname": "Dreaded 🚦", "author": "Fortunatus 🥷" },
