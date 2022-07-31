@@ -88,9 +88,9 @@ ${isPremium ? `❏ Expired: 「 ${xes.days} D ${xes.hours} H ${xes.minutes} M �
 			await conn.sendMessage(
 				msg.from,
 				{
-					video: { url: config.thumbvideo },
+					image: { url: config.thumb },
 					caption: str,
-					gifPlayback: true,
+					gifPlayback: false,
 					footer: config.namebot + " • " + config.ownername,
 					templateButtons: [
 						{ quickReplyButton: { displayText: "Script Bot ", id: "#script" } },
