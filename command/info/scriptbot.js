@@ -10,10 +10,10 @@ module.exports = {
 				image: { url: config.thumb },
 				footer: config.namebot,
 				// Gausah di ubah kontol najis modal copas sana sini ubah source cih
-				caption: `Bot Script Below\nFollow fork and give star lol...`,
-				templateButtons: [
-					{ urlButton: { displayText: "Bot Codes", url: "https://github.com/Fortunatusmokaya/Help" } },
-				],
+				caption: `Bot Script: *Https://GitHub.com/Fortunatusmokaya/Help*`,
+				
+
+				
 			},
 			{ quoted: msg }
 		);
