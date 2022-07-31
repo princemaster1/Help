@@ -88,7 +88,7 @@ ${isPremium ? `❏ Expired: 「 ${xes.days} D ${xes.hours} H ${xes.minutes} M �
 			await conn.sendMessage(
 				msg.from,
 				{
-					image: { url: config.thumb },
+					image: { url: config.thumb1 },
 					caption: str,
 					gifPlayback: false,
 					footer: config.namebot + " • " + config.ownername,
