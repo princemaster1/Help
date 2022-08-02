@@ -1,5 +1,5 @@
 module.exports = {
-	name: "done",
+	name: "+",
 	alias: ["admin"],
 	category: "group",
 	desc: "Promote owner to be admin group",
