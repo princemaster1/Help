@@ -8,6 +8,6 @@ module.exports = {
 	desc: "check time run  bot",
 	isSpam: true,
 	async run({ msg, conn }, { map }) {
-		Bot has been alive and running for await msg.reply(convertTime(map.uptime.getTime()));
+		bot has been alive and running for await msg.reply(convertTime(map.uptime.getTime()));
 	},
 };
