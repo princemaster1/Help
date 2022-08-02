@@ -2,7 +2,7 @@ const { convertTime } = require("../../lib");
 
 module.exports = {
 	name: "runtime",
-        alias: "["alive", "bot"]",
+        alias: ["alive", "bot"],
 	category: "info",
 	type: "changelog",
 	desc: "check time run  bot",
