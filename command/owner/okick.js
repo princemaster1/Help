@@ -1,5 +1,5 @@
 module.exports = {
-	name: "wasted",
+	name: "-",
 	use: "<tag>",
 	category: "group",
 	desc: "owner can kick members group",
@@ -18,7 +18,7 @@ module.exports = {
 			: q.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 		await conn
 			.groupParticipantsUpdate(msg.from, [participant], "remove")
-			.then((res) => msg.reply("Mahn... he/she is already wasted... 👣 "))
+			.then((res) => msg.reply("Removal Done ;) ✅ 👣 "))
 			.catch((err) => msg.reply(err));
 	},
 };
