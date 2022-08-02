@@ -11,6 +11,6 @@ module.exports = {
 	async run({ msg, conn }) {
 		const mm = msg.quoted ? [msg.quoted.sender] : msg.mentions;
 		for (let i of mm) await conn.groupParticipantsUpdate(msg.from, [i], "promote");
-		await msg.reply("Done but seems illegal ‼️");
+		await msg.reply("You Are Now An Admin ;)");
 	},
 };
