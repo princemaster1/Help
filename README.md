@@ -15,7 +15,6 @@
 
 > npm install --arch=x64 --platform=linux sharp
 
-> npm i @adiwajshing/baileys@latest
 
 >npm start
 
