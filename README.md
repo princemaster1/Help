@@ -1,4 +1,4 @@
-# Termux Installation
+# Termux iinstallation
 > pkg install
 
 > pkg upgrade
